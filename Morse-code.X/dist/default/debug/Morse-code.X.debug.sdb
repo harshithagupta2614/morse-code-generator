@@ -1,0 +1,60 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Users\Nehal\MPLABXProjects\Morse-code.X\newmain.c
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+"12
+[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
+"25
+[v _main main `(v  1 e 1 0 ]
+"217 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"279
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"1153
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1160
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1326
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1376
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1438
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"2223
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2230
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2579
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @250 ]
+"25 C:\Users\Nehal\MPLABXProjects\Morse-code.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"27
+[v main@a a `ui  1 a 2 8 ]
+"41
+} 0
+"12
+[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
+{
+[v ADC_Read@channel channel `uc  1 a 1 wreg ]
+[v ADC_Read@channel channel `uc  1 a 1 wreg ]
+"14
+[v ADC_Read@channel channel `uc  1 a 1 4 ]
+"23
+} 0
+"6
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+{
+"10
+} 0
