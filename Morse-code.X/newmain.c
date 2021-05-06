@@ -1,5 +1,7 @@
 #include <xc.h>
 #include <pic16f877a.h>
+#include <math.h>
+
 
 #define _XTAL_FREQ 8000000
 
@@ -25,16 +27,30 @@ unsigned int ADC_Read(unsigned char channel)
 void main()
 {
   unsigned int a;
+  unsigned int d;
   TRISA = 0xFF;                 //Analog pins as Input
-  TRISB = 0x00;                 //Port B as Output
+  TRISDbits.TRISD0 = 0;               //Port B as Output
   TRISC = 0x00;                 //Port C as Output
+  TRISB = 0x00;
   ADC_Init();                   //Initialize ADC
-
+  unsigned int i=0;
   do
   {
-    a = ADC_Read(0);            //Read Analog Channel 0
+    a = ADC_Read(0);
+    //Read Analog Channel 0
     PORTB = a;                  //Write Lower bits to PORTB
-    PORTC = a>>8;               //Write Higher 2 bits to PORTC
+    PORTC = a>>8;
+    d=a;
+    unsigned int j=1;
+    for(i=0;i<10;i++)
+    { 
+        PORTDbits.RD0 = a & j;
+        
+        j=j>>1;
+        __delay_ms(100);
+      
+    }
+    //Write Higher 2 bits to PORTC
     __delay_ms(100);
     //Delay
   }while(1);                    //Infinite Loop
